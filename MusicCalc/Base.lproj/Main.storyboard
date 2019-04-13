@@ -1,0 +1,257 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="MusicCalc" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3yC-Yn-6G7">
+                                <rect key="frame" x="165.5" y="215" width="44" height="46"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="44" id="1Aa-EI-Ohs"/>
+                                    <constraint firstAttribute="height" constant="46" id="PhU-PG-Elr"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="21"/>
+                                <state key="normal" title="Start">
+                                    <color key="titleColor" red="0.98032860690000001" green="1" blue="0.9871475166" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                </state>
+                                <connections>
+                                    <segue destination="iKA-Di-njh" kind="presentation" id="iU2-ld-MXW"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="簡易計算アプリ" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="g4L-rA-3Pd">
+                                <rect key="frame" x="109" y="101" width="157" height="27"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="27" id="3Mc-Ph-0MF"/>
+                                    <constraint firstAttribute="width" constant="157" id="jTm-bX-fHM"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="22"/>
+                                <color key="textColor" red="0.98032860690000001" green="1" blue="0.9871475166" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" cocoaTouchSystemColor="darkTextColor"/>
+                        <constraints>
+                            <constraint firstItem="3yC-Yn-6G7" firstAttribute="top" secondItem="g4L-rA-3Pd" secondAttribute="bottom" constant="87" id="Ckn-hr-eK4"/>
+                            <constraint firstItem="g4L-rA-3Pd" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="YsB-He-kCv"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="3yC-Yn-6G7" secondAttribute="bottom" constant="406" id="bys-Ou-e4b"/>
+                            <constraint firstItem="3yC-Yn-6G7" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="hUe-wi-ubh"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <connections>
+                        <outlet property="start" destination="3yC-Yn-6G7" id="YLG-te-hBw"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="129" y="133"/>
+        </scene>
+        <!--First View Controller-->
+        <scene sceneID="7i3-nd-RDY">
+            <objects>
+                <viewController id="iKA-Di-njh" customClass="FirstViewController" customModule="MusicCalc" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="k7z-bA-JK6">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="jZN-2K-VyL">
+                                <rect key="frame" x="142.5" y="62" width="90" height="110"/>
+                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="90" id="QkA-gm-ueD"/>
+                                    <constraint firstAttribute="height" constant="110" id="vca-OY-bkN"/>
+                                </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="textColor">
+                                        <color key="value" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <outlet property="dataSource" destination="iKA-Di-njh" id="cL0-8F-eLt"/>
+                                    <outlet property="delegate" destination="iKA-Di-njh" id="LQI-yq-qxf"/>
+                                </connections>
+                            </pickerView>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="right" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Cd9-yu-vi3">
+                                <rect key="frame" x="37" y="118" width="97" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="97" id="32M-aR-o59"/>
+                                    <constraint firstAttribute="height" constant="30" id="L6q-mp-lPx"/>
+                                </constraints>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
+                            </textField>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MGS-Og-sQg">
+                                <rect key="frame" x="127.5" y="258" width="120" height="53"/>
+                                <color key="backgroundColor" red="0.93725490199999995" green="0.93725490199999995" blue="0.95686274510000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="120" id="DI7-JR-KYT"/>
+                                    <constraint firstAttribute="width" secondItem="MGS-Og-sQg" secondAttribute="height" multiplier="120:53" id="NS7-hJ-TvE"/>
+                                    <constraint firstAttribute="height" constant="53" id="sGC-98-Nnw"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="right" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="pmb-Y5-dVf">
+                                <rect key="frame" x="240" y="118" width="97" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="97" id="VKi-9K-amg"/>
+                                    <constraint firstAttribute="height" constant="30" id="aPz-8S-0wI"/>
+                                </constraints>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qZs-LE-WQE" customClass="ButtonCustom" customModule="MusicCalc" customModuleProvider="target">
+                                <rect key="frame" x="267" y="318" width="62" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="Lrv-VP-Jcm"/>
+                                    <constraint firstAttribute="width" secondItem="qZs-LE-WQE" secondAttribute="height" multiplier="31:15" id="RtO-Bk-U81"/>
+                                    <constraint firstAttribute="width" constant="62" id="eug-H9-Yoz"/>
+                                </constraints>
+                                <state key="normal" title="リセット">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                        <color key="value" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                        <real key="value" value="0.5"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="5"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="reset:" destination="iKA-Di-njh" eventType="touchUpInside" id="15d-aa-Khr"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="c2o-Ok-s6b" customClass="ButtonCustom" customModule="MusicCalc" customModuleProvider="target">
+                                <rect key="frame" x="118.5" y="343" width="138" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="138" id="K3s-PQ-b14"/>
+                                    <constraint firstAttribute="height" constant="30" id="TGl-bG-Pgp"/>
+                                    <constraint firstAttribute="width" secondItem="c2o-Ok-s6b" secondAttribute="height" multiplier="23:5" id="s8k-Pe-utv"/>
+                                </constraints>
+                                <state key="normal" title="スタート画面に戻る">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="5"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                        <color key="value" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                        <real key="value" value="0.5"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <segue destination="ONq-iY-rGE" kind="unwind" unwindAction="restart:" id="Wsu-XU-GMF"/>
+                                </connections>
+                            </button>
+                            <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="数字を入力して下さい" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="O9C-Ee-hve" userLabel="Error Label1">
+                                <rect key="frame" x="37" y="98" width="97" height="12"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="97" id="3VK-HG-b0D"/>
+                                    <constraint firstAttribute="height" constant="12" id="KIU-6X-Rsu"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="10"/>
+                                <color key="textColor" red="1" green="0.07168009853" blue="0.1265307463" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="数字を入力して下さい" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9c4-ww-uXT">
+                                <rect key="frame" x="240" y="98" width="97" height="12"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="97" id="94j-dS-Oon"/>
+                                    <constraint firstAttribute="height" constant="12" id="zGR-Ja-tn7"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="10"/>
+                                <color key="textColor" red="1" green="0.07168009853" blue="0.1265307463" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Yi0-Jn-g2J" customClass="ButtonCustom" customModule="MusicCalc" customModuleProvider="target">
+                                <rect key="frame" x="157.5" y="193" width="60" height="40"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="Yi0-Jn-g2J" secondAttribute="height" multiplier="3:2" id="Ppi-bM-wMX"/>
+                                    <constraint firstAttribute="width" constant="60" id="Qyb-dT-Wbh"/>
+                                    <constraint firstAttribute="height" constant="40" id="kgL-QQ-M0g"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <state key="normal" title="計算">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="5"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                        <color key="value" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                        <real key="value" value="0.5"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="Calculete:" destination="iKA-Di-njh" eventType="touchUpInside" id="WRm-Iv-5U5"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" cocoaTouchSystemColor="darkTextColor"/>
+                        <constraints>
+                            <constraint firstItem="MGS-Og-sQg" firstAttribute="top" secondItem="Yi0-Jn-g2J" secondAttribute="bottom" constant="25" id="2il-7w-dJY"/>
+                            <constraint firstItem="pmb-Y5-dVf" firstAttribute="top" secondItem="9c4-ww-uXT" secondAttribute="bottom" constant="8" id="6Gt-41-dY8"/>
+                            <constraint firstItem="MGS-Og-sQg" firstAttribute="centerX" secondItem="k7z-bA-JK6" secondAttribute="centerX" id="9Ag-1z-TUG"/>
+                            <constraint firstItem="qCk-Qg-Sbz" firstAttribute="trailing" secondItem="9c4-ww-uXT" secondAttribute="trailing" constant="38" id="Gay-vI-ol4"/>
+                            <constraint firstItem="O9C-Ee-hve" firstAttribute="leading" secondItem="qCk-Qg-Sbz" secondAttribute="leading" constant="37" id="IM1-N5-rtN"/>
+                            <constraint firstItem="qCk-Qg-Sbz" firstAttribute="bottom" secondItem="c2o-Ok-s6b" secondAttribute="bottom" constant="294" id="M3H-fv-zEf"/>
+                            <constraint firstItem="Yi0-Jn-g2J" firstAttribute="centerX" secondItem="k7z-bA-JK6" secondAttribute="centerX" id="Zgb-17-ZfW"/>
+                            <constraint firstItem="c2o-Ok-s6b" firstAttribute="centerX" secondItem="k7z-bA-JK6" secondAttribute="centerX" id="dPv-QR-uVS"/>
+                            <constraint firstItem="Yi0-Jn-g2J" firstAttribute="top" secondItem="jZN-2K-VyL" secondAttribute="bottom" constant="21" id="iDR-4e-PZG"/>
+                            <constraint firstItem="qCk-Qg-Sbz" firstAttribute="trailing" secondItem="pmb-Y5-dVf" secondAttribute="trailing" constant="38" id="m3b-2X-qoV"/>
+                            <constraint firstItem="jZN-2K-VyL" firstAttribute="centerX" secondItem="k7z-bA-JK6" secondAttribute="centerX" id="n15-7n-hTJ"/>
+                            <constraint firstItem="MGS-Og-sQg" firstAttribute="top" secondItem="pmb-Y5-dVf" secondAttribute="bottom" constant="110" id="nbI-EL-alp"/>
+                            <constraint firstItem="qCk-Qg-Sbz" firstAttribute="bottom" secondItem="qZs-LE-WQE" secondAttribute="bottom" constant="319" id="niu-wA-WPi"/>
+                            <constraint firstItem="c2o-Ok-s6b" firstAttribute="top" secondItem="MGS-Og-sQg" secondAttribute="bottom" constant="32" id="qyT-mP-6oz"/>
+                            <constraint firstItem="qCk-Qg-Sbz" firstAttribute="trailing" secondItem="qZs-LE-WQE" secondAttribute="trailing" constant="46" id="rrR-bX-ce8"/>
+                            <constraint firstItem="Cd9-yu-vi3" firstAttribute="top" secondItem="O9C-Ee-hve" secondAttribute="bottom" constant="8" id="tfZ-Vd-dur"/>
+                            <constraint firstItem="Cd9-yu-vi3" firstAttribute="leading" secondItem="qCk-Qg-Sbz" secondAttribute="leading" constant="37" id="y17-Lh-2cw"/>
+                            <constraint firstItem="MGS-Og-sQg" firstAttribute="top" secondItem="Cd9-yu-vi3" secondAttribute="bottom" constant="110" id="zqS-tb-zVp"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="qCk-Qg-Sbz"/>
+                    </view>
+                    <connections>
+                        <outlet property="errorLabel1" destination="O9C-Ee-hve" id="QxP-lZ-aQ0"/>
+                        <outlet property="errorLabel2" destination="9c4-ww-uXT" id="gBi-0O-GX4"/>
+                        <outlet property="picker" destination="jZN-2K-VyL" id="SMS-0G-z3c"/>
+                        <outlet property="resultLabel" destination="MGS-Og-sQg" id="2ga-ga-7VF"/>
+                        <outlet property="value1" destination="Cd9-yu-vi3" id="8q2-Wc-lRh"/>
+                        <outlet property="value2" destination="pmb-Y5-dVf" id="ymV-Oj-c0b"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="1aP-Lk-jaY" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <exit id="ONq-iY-rGE" userLabel="Exit" sceneMemberID="exit"/>
+            </objects>
+            <point key="canvasLocation" x="936.79999999999995" y="132.68365817091455"/>
+        </scene>
+    </scenes>
+</document>
